@@ -2,8 +2,7 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 var model = require('./model');
 
-var dbUrl = "mongodb://test:test@ds049160.mongolab.com:49160/ca3database";
-
+var dbUrl = "mongodb://test:test@ds033390.mongolab.com:33390/ca3database";
 
 function readData(path) {
     var file = fs.readFileSync(path, 'utf8');
