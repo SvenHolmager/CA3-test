@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var dbURI = 'mongodb://localhost/northwind';
+var dbURI = "mongodb://test:test@ds049160.mongolab.com:49160/ca3database";
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {
