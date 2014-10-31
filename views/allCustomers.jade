@@ -1,0 +1,32 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th CustomerID
+                th CompanyName
+                th ContactName
+                th ContactTitle
+                th Address
+                th City
+                th Region
+                th PostalCode
+                th Country
+                th Phone
+                th Fax
+            tbody
+                - each c in customers
+                    tr
+                        td
+                            a(href = 'customers/'+c._id )  #{c._id}
+                        td= c.companyName
+                        td= c.contactName
+                        td= c.contactTitle
+                        td= c.address
+                        td= c.city
+                        td= c.region
+                        td= c.postalCode
+                        td= c.country
+                        td= c.phone
+                        td= c.fax
+

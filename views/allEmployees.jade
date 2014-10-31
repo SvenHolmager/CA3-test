@@ -1,0 +1,39 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th EmployeeID
+                th LastName
+                th FirstName
+                th Title
+                th TitleOfCourtesy
+                th BirthDate
+                th HireDate
+                th Address
+                th City
+                th Region
+                th PostalCode
+                th Country
+                th HomePhone
+                th Extension
+                th Notes
+            tbody
+                - each e in employees
+                    tr
+                        td
+                            a(href = 'employees/'+e._id )  #{e._id}
+                        td= e.lastName
+                        td= e.firstName
+                        td= e.title
+                        td= e.titleOfCourtesy
+                        td= e.birthDate
+                        td= e.hireDate
+                        td= e.address
+                        td= e.city
+                        td= e.region
+                        td= e.postalCode
+                        td= e.country
+                        td= e.homePhone
+                        td= e.extension
+                        td= e.notes

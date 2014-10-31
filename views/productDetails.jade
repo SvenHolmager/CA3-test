@@ -1,0 +1,20 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th OrderID
+                th productId
+                th unitPrice
+                th quantity
+                th discount
+
+            tbody
+                - each o in orderDetails
+                    tr
+                        td
+                            a(href = '../orderdetails/'+o.orderId )  #{o.orderId}
+                        td= o.productId
+                        td= o.unitPrice
+                        td= o.quantity
+                        td= o.discount

@@ -1,0 +1,17 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th OrderID
+                th Date
+                th Name
+                th Address
+            tbody
+                - each o in orders
+                    tr
+                        td
+                            a(href = 'orderdetails/'+o._id )  #{o._id}
+                        td= o.orderDate
+                        td= o.shipName
+                        td= o.shipAddress

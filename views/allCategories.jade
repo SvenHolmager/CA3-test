@@ -1,0 +1,15 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th CategoryID
+                th Name
+                th Description
+            tbody
+                - each c in categories
+                    tr
+                        td= c._id
+                        td
+                            a(href = 'categories/'+c._id )  #{c.name}
+                        td= c.description

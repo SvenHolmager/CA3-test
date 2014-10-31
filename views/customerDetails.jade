@@ -1,0 +1,34 @@
+extends layout
+block content
+        table
+            thead
+                tr
+                    th OrderID
+                    th CustomerId
+                    th RequiredDate
+                    th ShippedDate
+                    th ShipVia
+                    th Freight
+                    th ShipName
+                    th ShipAddress
+                    th ShipCity
+                    th ShipRegion
+                    th ShipPostalCode
+                    th ShipCountry
+                tbody
+                    - each o in orders
+                        tr
+                            td
+                                a(href = '../orderdetails/'+o._id )  #{o._id}
+                            td= o.customerId
+                            td= o.orderDate
+                            td= o.requiredDate
+                            td= o.shippedDate
+                            td= o.shipVia
+                            td= o.freight
+                            td= o.shipName
+                            td= o.shipAddress
+                            td= o.shipCity
+                            td= o.shipRegion
+                            td= o.shipPostalCode
+                            td= o.shipCountry

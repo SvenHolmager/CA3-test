@@ -1,0 +1,27 @@
+extends layout
+block content
+    table
+        thead
+            tr
+                th ProductID
+                th Name
+                th CategoryId
+                th QuantityPerUnit
+                th UnitPrice
+                th UnitsInStock
+                th UnitsOnOrder
+                th ReorderLevel
+                th Discontinued
+            tbody
+                - each p in products
+                    tr
+                        td
+                            a(href = '../products/'+p._id )  #{p._id}
+                        td= p.name
+                        td= p.categoryId
+                        td= p.quantityPerUnit
+                        td= p.unitPrice
+                        td= p.unitsInStock
+                        td= p.unitsOnOrder
+                        td= p.reorderLevel
+                        td= p.discontinued
